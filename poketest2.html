@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>素早さ診断</title>
+	<style>
+	input {
+		width: 30px;
+		text-align: center;
+		float: right;
+		margin-right: 50px;
+	}
+
+	button {
+		border-radius: 20px;
+		background-color: #CFDBC5;
+		font-weight: bold;
+		margin-left: 50px;
+		margin-bottom: 10px;
+	}
+
+	#prioritize {
+		border: 4px solid black;
+		border-radius: 20px;
+		width: 500px;
+		background-color: #96CDCD;
+	}
+
+	#sound {
+		float: center;
+		margin-right: 0px;
+		width: 10px;
+	}
+
+	.namess {
+		margin-left: 30px;
+	}
+
+	#moder {
+		margin-left: 30px;
+		margin-bottom: 20px;
+	}
+	</style>
+	<!-- http://blog-imgs-77.fc2.com/y/a/r/yardrain/poketest.js -->
+	<script type = "text/javascript" src = "poketest.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body text = "#000000" bgcolor = "#84BE6A">
+
+<div id = "prioritize">
+<h2>素早さテスト ver1.02</h2>
+<p> 1から5の半角数字で素早いポケモン順にランク付けてください。<br>具体的には素早さの種族値順です。<br>色々バグっている可能性があるのでご注意を。<br>伝説を含む最終進化系ポケモンが全て出ます。<br>（ポリ２などの使い道がある進化前も含む）</p>
+
+<select id = "moder">
+  <option value = "1">順序入力モード</option>
+  <option value = "2">種族値入力モード</option>
+</select>
+<input type="checkbox" id="sound" name="sound">音声<br>
+
+<form action="demo_form.asp">
+<span id = "pok1" class = "namess">pok1:</span> <input type="text" id = "a" value="" maxlength="3"> <br> 
+<span id = "pok2" class = "namess">pok2:</span> <input type="text" id = "b" value="" maxlength="3"> <br>
+<span id = "pok3" class = "namess">pok3:</span> <input type="text" id = "c" value="" maxlength="3"> <br>
+<span id = "pok4" class = "namess">pok4:</span> <input type="text" id = "d" value="" maxlength="3"> <br>
+<span id = "pok5" class = "namess">pok5:</span> <input type="text" id = "e" value="" maxlength="3"> <br>
+</form>
+
+<button onclick = "checkSols()">完了でござる</button>
+<button onclick = "reset()">リセットするのじゃ</button>
+<button onclick = "answer()">答えを表示</button>
+</div>
+
+<img id ="img" src="./correct.png" height ="250" width ="500" style="display: none"> 
+
+
+</body>
+</html>
